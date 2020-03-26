@@ -10,7 +10,9 @@ let _state = {
     new Snacks({ name: "Red Bull", price: 3.5, amount: 8 })
   ],
   /** @type {Money[]} */
-  money: [new Money({ count: 0 })]
+  money: [new Money({ count: 0 })],
+  /** @type {Snacks[]} */
+  purchasedSnacks: []
 };
 
 class Store {

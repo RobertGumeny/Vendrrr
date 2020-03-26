@@ -12,11 +12,11 @@ class SnacksService {
       ) {
         snacks[i].amount--;
         _store.State.money[0].count -= snacks[i].price;
-        console.log(`${snacks[i].name} purchased!`);
+        _store.State.purchasedSnacks.push(snacks[i].name);
+        console.log(`${_store.State.purchasedSnacks}`);
       }
   }
 }
 
 const SNACKS = new SnacksService();
-console.log("Snacks Service is linked");
 export default SNACKS;
